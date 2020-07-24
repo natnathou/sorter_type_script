@@ -5,8 +5,12 @@ class NumberCollection {
     return this.collection.length;
   }
 
-  compare(): boolean {
-    return true;
+  compare(i: number): boolean {
+    if (this.collection[i] > this.collection[i + 1]) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   swap(): void {}
