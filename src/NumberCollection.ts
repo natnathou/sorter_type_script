@@ -1,17 +1,17 @@
-class NumberCollection {
-  constructor(public collection: number[]) {}
+export class NumberCollection {
+	constructor(public data: number[]) {}
 
-  get length(): number {
-    return this.collection.length;
-  }
+	get length(): number {
+		return this.data.length;
+	}
 
-  compare(i: number): boolean {
-    if (this.collection[i] > this.collection[i + 1]) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+	compare(leftIndex: number, rightIndex: number): boolean {
+		return this.data[leftIndex] > this.data[rightIndex];
+	}
 
-  swap(): void {}
+	swap(leftIndex: number, rightIndex: number): void {
+		let lefItem = this.data[leftIndex];
+		this.data[leftIndex] = this.data[rightIndex];
+		this.data[rightIndex] = lefItem;
+	}
 }

@@ -1,1 +1,15 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var NumberCollection_1 = require("./NumberCollection");
+var StringCollection_1 = require("./StringCollection");
+var Sorter_1 = require("./Sorter");
+var num = new NumberCollection_1.NumberCollection([4, 7, 3, 9, 1]);
+var chart = new StringCollection_1.StringCollection('Oiklers');
+var sorterNum = new Sorter_1.Sorter(num);
+var sorterString = new Sorter_1.Sorter(chart);
+console.log(num.data);
+console.log(chart.data);
+sorterNum.sort();
+sorterString.sort();
+console.log(num.data);
+console.log(chart.data);
